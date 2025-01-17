@@ -1,5 +1,6 @@
 module "mysql_sg" {
-    source = "../../terraform-aws-security-group"
+    #source = "../../terraform-aws-security-group"
+    source = "git@github.com:Guru-Devops-creator/terraform-aws-security-groups.git?ref=main"
     project_name = var.project_name
     environment = var.environment
     sg_name = "mysql"
@@ -9,7 +10,8 @@ module "mysql_sg" {
 }
 
 module "backend_sg" {
-    source = "../../terraform-aws-security-group"
+    #source = "../../terraform-aws-security-group"
+    source = "git@github.com:Guru-Devops-creator/terraform-aws-security-groups.git?ref=main"
     project_name = var.project_name
     environment = var.environment
     sg_name = "backend"
@@ -19,7 +21,8 @@ module "backend_sg" {
 }
 
 module "frontend_sg" {
-    source = "../../terraform-aws-security-group"
+    #source = "../../terraform-aws-security-group"
+    source = "git@github.com:Guru-Devops-creator/terraform-aws-security-groups.git?ref=main"
     project_name = var.project_name
     environment = var.environment
     sg_name = "frontend"
@@ -29,7 +32,8 @@ module "frontend_sg" {
 }
 
 module "bastion_sg" {
-    source = "../../terraform-aws-security-group"
+    #source = "../../terraform-aws-security-group"
+    source = "git@github.com:Guru-Devops-creator/terraform-aws-security-groups.git?ref=main"
     project_name = var.project_name
     environment = var.environment
     sg_name = "bastion"
